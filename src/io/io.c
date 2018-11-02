@@ -34,5 +34,5 @@ size_t get_file_content_length(char *filename) {
     int fd = fileno(file);
     struct stat buf;
     fstat(fd, &buf);
-    return buf.st_size;
+    return (size_t)buf.st_size;
 }
